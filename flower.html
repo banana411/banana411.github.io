@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<head>
+<script src="/assets/jquery.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Londrina+Shadow' rel='stylesheet' type='text/css'>
+<style>
+body {
+  font-family: "Brush Script MT";
+  margin: 0 auto;
+  max-width: 600px;
+  background: #32478593;
+}
+div {
+  height: 350px;
+  background-size: cover;
+  position: relative;
+  margin: 40px 0 0 0;
+  border-radius: 12px;
+}
+h1 {
+  font-family: arial 'helvetica', sens-serif;
+  text-align: center;
+  font-size: 75px;
+  color: #aa;
+  margin: 60px 0 0 0;
+  color: gold;
+}
+  ul {
+    padding: 10px;
+    background: rgba(20,50,150,0.5);
+    text-align: center;
+  }
+  li {
+    display: inline;
+    padding: 0px 10px 0px 10px;
+  }
+h2 {
+  text-align: center;
+  color: #bbbbbb;
+  margin: 0px 0 70px 0;
+}
+p {
+  color: rgba(255,220,255,1);
+  background: black;
+  background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -webkit-linear-gradient(bottom, rgba(10,90,20,1), rgba(0,0,0,.4));
+  background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  padding: 10px;
+  line-height: 28px;
+  text-align: justify;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  height: 30px;
+  transition: height .5s;
+  -webkit-transition: height .5s;
+  -moz-transition: height .5s;
+}
+
+small {
+  opacity: 0;
+}
+
+.show-description p {
+  height: 150px;
+}
+
+.show-description small {
+  opacity: 1;
+}
+
+
+.price {
+  float: right;
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    line-height: 40px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 20px 0 30px 0;
+  }
+  div {
+    margin: 20px 12px 0 12px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  small {
+    font-size: 16px;
+  }
+}
+
+</style>
+
+</head>
+
+
+<body>
+  <ul>
+        <li><button onclick=appetizers()>appetizers</button></li>
+        <li><button onclick=desserts()>desserts</button></li>
+        <li><button onclick=entree()>entree</button></li>
+      </ul>
+
+<h1>hom-pom serve</h1>
+<h2>we take care of you with good food</h2>
+
+<div id="water"></div>
+
+<script>
+appetizerImages = [
+  'url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROwSZsbGOyO8SDjcPuo_klJ_O8CxOvYjXYyQLg9x_iUlonbBmhwA")',
+  'url("https://static01.nyt.com/images/2015/05/13/dining/13KITCHEN1/13KITCHEN1-superJumbo.jpg")',
+  'url("http://biryanibistro.com/wp-content/uploads/2018/05/Untitled-1.png")',
+  ]
+  dessertsImages = [
+    'url("https://www.bbcgoodfood.com/sites/default/files/recipe-collections/collection-image/2018/09/dessert-main-image-molten-cake.jpg")',
+    'url("https://images-gmi-pmc.edge-generalmills.com/817d708a-33e6-46f7-b985-0360b6c55cf4.jpg")',
+    'url("https://cheddars.com/wp-content/themes/csk/images/menu-hot-fudge-chocolate-cake.jpg")',
+  ]
+  entreeImages = [
+   'url("https://www.beefobradys.com/images/entrees-grilled-shrimp.jpg")',
+    'url("https://www.foodbusinessnews.net/ext/resources/FBN-Features/10/GreencoreSandwich_Lead.jpg?1539611869")',
+    'url("https://static1.squarespace.com/static/56aac6e0859fd0d3e6981db5/56ab7b10be7b96fafe93322f/56ab7b1189a60a49487dd845/1454094520156       /167308_147535265304772_131617350229897_311221_6320295_n.jpg")',
+  ]
+AppetizersDivs = [
+	 '<div class="item"><p>slices of pork <span class="price">$11</span><br /><small>this is made with freh pork and vegetables.it has a special taste to it. </small></p></div>',
+		'<div class="item"><p>squid chops <span class="price">$22</span><br /><small>made with hot squid and has sauce. this is a see food and its pretty expensive. but it taste really good   </small></p></div>',
+		'<div class="item"><p>jubyryani <span class="price">$8</span><br /><small>this is a cultural food and it contains rice with bit of chicken and yougurt.</small></p></div>',
+]
+dessertsDivs = [
+	 '<div class="item"><p>chochlate milk with white cream <span class="price">$8</span><br /><small>this is made with white coco and has sweet sweet flavour. i personally like it. </small></p></div>',
+		'<div class="item"><p>cake <span class="price">$22</span><br /><small>very good and taste like sweet sweet me. soo good </small></p></div>',
+		'<div class="item"><p>another cake  <span class="price">$8</span><br /><small>hershys cake is the best and we habe the best cakes in the town .</small></p></div>',
+]
+entreeDivs = [
+	 '<div class="item"><p>chicke over rice  <span class="price">$14</span><br /><small>Mustard sierra leone bologi and yea its gucci. </small></p></div>',
+		'<div class="item"><p>burgers <span class="price">$22</span><br /><small>this is very beautiful and taaaasty verryyyy good. </small></p></div>',
+		'<div class="item"><p>kabab <span class="price">$8</span><br /><small>.</small></p></div>',
+]
+
+  $('div').on('click', function() {
+      $(this).toggleClass('show-description');
+  });
+  
+  function appetizers() {
+    cool = document.getElementById("water")
+    cool.innerHTML = ''
+	  cool.innerHTML += AppetizersDivs[0]
+    cool.innerHTML += AppetizersDivs[1]
+    cool.innerHTML += AppetizersDivs[2]
+
+    //alert(" you are in the appetizer page ")
+    items = document.getElementsByClassName("item")
+    for (i=0; i<3; i=i+1) {
+		  items[i].style.background = appetizerImages[i]
+		  items[i].style.backgroundSize = '100% 100%'
+    }  
+  }
+  function desserts() {
+    hot = document.getElementById("water")
+    hot.innerHTML = ''
+    hot.innerHTML += dessertsDivs[0]
+    hot.innerHTML += dessertsDivs[1]
+    hot.innerHTML += dessertsDivs[2]
+
+    //alert(" you are in the appetizer page ")
+    items = document.getElementsByClassName("item")
+   for (i=0; i<3; i=i+1) {
+		  items[i].style.background = dessertsImages[i]
+		  items[i].style.backgroundSize = '100% 100%'
+    }  
+  }
+  function entree() {
+    boom = document.getElementById("water")
+    boom.innerHTML = ''
+	  boom.innerHTML += AppetizersDivs[0]
+    boom.innerHTML += AppetizersDivs[1]
+    boom.innerHTML += AppetizersDivs[2]
+
+    //alert(" you are in the appetizer page ")
+    items = document.getElementsByClassName("item")
+    for (i=0; i<3; i=i+1) {
+		  items[i].style.background = entreeImages[i]
+		  items[i].style.backgroundSize = '100% 100%'
+    }  
+  }
+
+
+</script>
+
+</body>
