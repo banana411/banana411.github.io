@@ -45,17 +45,18 @@ a {
   Elements
   ================================================== */
 .btn {
-  background-color: #199EB8;
+  background-color: #079EB8;
   font-family: "Roboto", Helvetica, Arial, sans-serif;
   font-weight: 800;
-  color: #fff390;
+  color: #52ff70;
   padding: 15px 45px;
   border-radius: 50px;
+	background-color: red;
 }
 
 .btn:hover {
-  background-color: #E04F00;
-  color: #fff;
+  background-color: #ff4F00;
+  color: #f026ff;
 }
 
 .btn:focus {
@@ -68,7 +69,7 @@ a {
 }
 
 .btn-ghost:hover {
-  background-color: #fff;
+  background-color: #f367ff;
   color: #199EB8;
 }
 
@@ -97,7 +98,7 @@ a:hover {
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  background: #199EB8;
+  background: #5ffEB8;
   color: #fff;
   text-align: center;
   font-size: 24px;
@@ -117,7 +118,7 @@ a:hover {
   background-image: url(http://wallpapers.ae/wp-content/uploads/2015/08/Beach-Resort-HD-Picture.jpeg);
   background-size: cover;
   padding: 150px 0;
-  color: #ff259f;
+  color: #32459f;
   width: 100%;
   height: 100vh;
 }
@@ -152,7 +153,7 @@ a:hover {
 }
 
 .tagline {
-  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  font-family: font-family: 'Anton', sans-serif;
   font-size: 26px;
   margin: 45px 0 75px 0;
   color: #f949ff;
@@ -314,7 +315,7 @@ a:hover {
 }
 
 .nav-menu ul li {
-  background: #f158ff;
+  background: #;
   border-top: 1px solid #f4f4f4;
 }
 
@@ -323,14 +324,14 @@ a:hover {
 }
 
 .nav-menu ul li:hover {
-  background: #199EB8;
+  background: #1ff352;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
 }
 
 .nav-menu ul li a {
-  color: #333;
+  color: #3ff343;
   -webkit-transition: none;
   -o-transition: none;
   transition: none;
@@ -338,7 +339,7 @@ a:hover {
 }
 
 .nav-menu ul li a:hover {
-  color: #fff;
+  color: #f256ff;
 }
 
 .nav-menu ul ul {
@@ -465,6 +466,12 @@ body.mobile-nav-active #mobile-nav-toggle {
 ================================================== */
 .stats-row {
   margin-top: 65px;
+	background-color:#f45f3f;
+	
+}
+
+.about {
+	background: aqua;
 }
 
 .stats-col .circle {
@@ -473,7 +480,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   height: 160px;
   font-family: "Raleway", Helvetica, Arial, sans-serif;
   font-weight: 500;
-  color: #666;
+  color: #1f6;
   border: 6px solid #199EB8;
   border-radius: 50%;
   padding: 55px 25px 0 25px;
@@ -481,7 +488,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .stats-col .circle .stats-no {
-  color: #fff;
+  color: #f359ff;
   width: 70px;
   height: 70px;
   line-height: 70px;
@@ -489,7 +496,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   right: -15px;
   font-family: "Raleway", Helvetica, Arial, sans-serif;
   font-size: 18px;
-  background-color: #E04F00;
+  background-color: #243F00;
   position: absolute;
   border-radius: 50%;
   font-weight: 700;
@@ -499,7 +506,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   Parallax Styling
   ================================================== */
 .block {
-  color: #fff;
+  color: #f345ff;
   height: 490px;
   overflow: hidden;
   padding-top: 85px;
@@ -511,7 +518,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .block p {
-  color: #fff;
+  color: #f534ff;
   margin-bottom: 45px;
 }
 
@@ -520,10 +527,11 @@ body.mobile-nav-active #mobile-nav-toggle {
   ================================================== */
 .features {
   padding-bottom: 45px;
+	background-color: #f4f05f;
 }
 
 .features h2 {
-  color: #199EB8;
+  color: #313EB8;
 }
 
 .feature-col {
@@ -545,7 +553,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   height: 70px;
   margin-bottom: 15px;
   background: #198;
-  color: #2693;
+  color: #26ff93;
   font-size: 24px;
   text-align: center;
   line-height: 70px;
@@ -560,7 +568,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 .feature-col p {
   font-family: "Roboto", Helvetica, Arial, sans-serif;
   font-size: 19px;
-  color: #929;
+  color: #9ff249;
 }
 
 /* ==================================================
@@ -764,18 +772,18 @@ body.mobile-nav-active #mobile-nav-toggle {
   Contact Section
   ================================================== */
 #contact {
-  background: #f7f7f7;
+  background: #2f2;
   padding: 80px 0;
 }
 
 #contact h2 {
   font-family: "Raleway", Helvetica, Arial, sans-serif;
-  color: #199EB8;
+  color: #3ff;
 }
 
 #contact .info i {
   font-size: 32px;
-  color: #199EB8;
+  color: #736ff8;
   float: left;
 }
 
@@ -786,7 +794,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #contact .form #sendmessage {
   color: #199EB8;
-  border: 1px solid #199EB8;
+  border: 1px solid #4f48ff;
   display: none;
   text-align: center;
   padding: 15px;
@@ -826,14 +834,14 @@ body.mobile-nav-active #mobile-nav-toggle {
   background: #199EB8;
   border: 0;
   padding: 10px 24px;
-  color: #fff;
+  color: #ff352f;
   -webkit-transition: 0.4s;
   -o-transition: 0.4s;
   transition: 0.4s;
 }
 
 #contact .form button[type="submit"]:hover {
-  background: #23c2e1;
+  background: #2efff1;
 }
 
 /* ==================================================
